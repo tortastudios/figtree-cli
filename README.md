@@ -49,7 +49,9 @@ That's it! The tool will walk you through everything.
 
 ### Step 1: Connect to Figma
 
-- Paste your Figma file URL or file key
+- Paste your Figma file URL or file key (both work!)
+  - **Full URL**: `https://www.figma.com/design/FVt1g2IuPzKJeQu8QlIGlA/My-Design`
+  - **File key only**: `FVt1g2IuPzKJeQu8QlIGlA`
 - Tool reads all your colors, fonts, and effects
 - Shows you a summary of what it found
 
@@ -140,6 +142,13 @@ figtree --token your-figma-token
 # Debug mode
 figtree --debug
 ```
+
+**Pro tip**: When the tool asks for your Figma file key, you can paste either:
+
+- The full Figma URL: `https://www.figma.com/design/FVt1g2IuPzKJeQu8QlIGlA/My-Design`
+- Just the file key: `FVt1g2IuPzKJeQu8QlIGlA`
+
+The tool will automatically extract the file key from the URL if needed!
 
 ## Examples
 
