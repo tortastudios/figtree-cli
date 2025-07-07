@@ -1,6 +1,6 @@
 {
   "name": "figtree-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool to extract design tokens from Figma and convert them to various code formats using AI",
   "main": "bin/figtree.js",
   "bin": {
