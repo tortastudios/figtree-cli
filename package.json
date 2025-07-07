@@ -1,0 +1,76 @@
+{
+  "name": "figtree-cli",
+  "version": "1.0.0",
+  "description": "CLI tool to extract design tokens from Figma and convert them to various code formats using AI",
+  "main": "bin/figtree.js",
+  "bin": {
+    "figtree": "bin/figtree.js"
+  },
+  "scripts": {
+    "start": "node bin/figtree.js",
+    "dev": "node bin/figtree.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/ bin/",
+    "lint:fix": "eslint src/ bin/ --fix",
+    "prepare": "node scripts/prepare.js"
+  },
+  "keywords": [
+    "figma",
+    "design-tokens",
+    "design-system",
+    "cli",
+    "codegen",
+    "ai",
+    "css",
+    "tailwind",
+    "swift",
+    "android",
+    "design-to-code"
+  ],
+  "files": [
+    "bin/",
+    "src/",
+    "env.example",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tortastudios/figtree.git"
+  },
+  "homepage": "https://github.com/tortastudios/figtree#readme",
+  "bugs": {
+    "url": "https://github.com/tortastudios/figtree/issues"
+  },
+  "author": "Torta Studios LLC",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "dependencies": {
+    "ai": "^4.2.0",
+    "@ai-sdk/openai": "^1.0.0",
+    "@ai-sdk/google": "^1.0.0",
+    "@ai-sdk/anthropic": "^1.0.0",
+    "@ai-sdk/deepseek": "^0.2.14",
+    "chalk": "^5.4.1",
+    "dotenv": "^16.6.1",
+    "inquirer": "^9.3.7",
+    "ora": "^7.0.1",
+    "undici": "^7.11.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1"
+  },
+  "funding": {
+    "type": "contact",
+    "url": "mailto:tech@tortastudios.com"
+  },
+  "type": "module",
+  "preferGlobal": true
+}
