@@ -39,11 +39,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tortastudios/figtree.git"
+    "url": "git+https://github.com/tortastudios/figtree-cli.git"
   },
-  "homepage": "https://github.com/tortastudios/figtree#readme",
+  "homepage": "https://github.com/tortastudios/figtree-cli#readme",
   "bugs": {
-    "url": "https://github.com/tortastudios/figtree/issues"
+    "url": "https://github.com/tortastudios/figtree-cli/issues"
   },
   "author": "Torta Studios LLC",
   "license": "SEE LICENSE IN LICENSE.md",
