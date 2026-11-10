@@ -32,7 +32,7 @@
     "src/",
     "env.example",
     "README.md",
-    "LICENSE"
+    "LICENSE.md"
   ],
   "engines": {
     "node": ">=18.0.0"
@@ -46,7 +46,7 @@
     "url": "https://github.com/tortastudios/figtree-cli/issues"
   },
   "author": "Torta Studios LLC",
-  "license": "SEE LICENSE IN LICENSE.md",
+  "license": "FSL-1.1-MIT",
   "dependencies": {
     "ai": "^4.2.0",
     "@ai-sdk/openai": "^1.0.0",
