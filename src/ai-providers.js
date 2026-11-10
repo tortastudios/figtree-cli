@@ -1,5 +1,5 @@
 import { openai } from '@ai-sdk/openai'
-import { google } from '@ai-sdk/google'
+import { createGoogleGenerativeAI } from '@ai-sdk/google'
 import { anthropic } from '@ai-sdk/anthropic'
 import { deepseek } from '@ai-sdk/deepseek'
 import { generateText, generateObject } from 'ai'
@@ -21,7 +21,7 @@ const AI_PROVIDERS = {
       o1: 'o1 - Most powerful model',
       'o1-pro': 'o1 Pro - More compute than o1 for better responses'
     },
-    factory: openai,
+    factory: openai.chat,
     envVar: 'OPENAI_API_KEY',
     defaultModel: 'o4-mini'
   },
@@ -32,7 +32,9 @@ const AI_PROVIDERS = {
       'gemini-2.5-flash':
         'Gemini 2.5 Flash - Adaptive thinking, cost efficient'
     },
-    factory: google,
+    factory: (modelId) => createGoogleGenerativeAI({
+      apiKey: process.env.GOOGLE_API_KEY
+    })(modelId),
     envVar: 'GOOGLE_API_KEY',
     defaultModel: 'gemini-2.5-flash'
   },
@@ -463,6 +465,7 @@ export async function generateDesignTokens(styles, options = {}) {
   // Define the schema for design tokens
   const tokenSchema = z.object({
     colors: z.record(
+      z.string(),
       z.object({
         value: z.string(),
         type: z.literal('color'),
@@ -470,6 +473,7 @@ export async function generateDesignTokens(styles, options = {}) {
       })
     ),
     typography: z.record(
+      z.string(),
       z.object({
         value: z.object({
           fontFamily: z.string(),
@@ -483,6 +487,7 @@ export async function generateDesignTokens(styles, options = {}) {
     ),
     spacing: z
       .record(
+        z.string(),
         z.object({
           value: z.string(),
           type: z.literal('spacing'),
@@ -492,6 +497,7 @@ export async function generateDesignTokens(styles, options = {}) {
       .optional(),
     effects: z
       .record(
+        z.string(),
         z.object({
           value: z.string(),
           type: z.literal('effect'),

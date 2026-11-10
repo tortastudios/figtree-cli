@@ -38,6 +38,8 @@ No extra tools. No copy-pasting. Just your Figma token and this CLI.
 
 ### 2. Install and run
 
+Requires Node.js 20.18.1 or later.
+
 ```bash
 npm install -g figtree-cli
 figtree
