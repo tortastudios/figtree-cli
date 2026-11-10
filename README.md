@@ -360,7 +360,9 @@ We welcome contributions! Here's how:
 
 ## 📄 License
 
-This project is licensed under the Business Source License 1.1. See the [LICENSE](LICENSE) file for details.
+This project uses [FSL-1.1-MIT](LICENSE.md), a source-available license. You can use it for anything except offering a competing product or service. Each version becomes available under the MIT license two years after its release.
+
+This replaces the earlier custom license.
 
 ---
 
